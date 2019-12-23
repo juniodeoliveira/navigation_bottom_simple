@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_navigation_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/item_home"
+        app:layout_constraintTop_toTopOf="@id/item_home" />
+
+    <com.example.easynavigationbottom.ItemNavigationBottom
+        android:id="@+id/item_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/item_indication"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.easynavigationbottom.ItemNavigationBottom
+        android:id="@+id/item_indication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/item_buy"
+        app:layout_constraintStart_toEndOf="@id/item_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.easynavigationbottom.ItemNavigationBottom
+        android:id="@+id/item_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/item_wallet"
+        app:layout_constraintStart_toEndOf="@id/item_indication"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.easynavigationbottom.ItemNavigationBottom
+        android:id="@+id/item_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/item_help"
+        app:layout_constraintStart_toEndOf="@id/item_buy"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.easynavigationbottom.ItemNavigationBottom
+        android:id="@+id/item_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_wallet"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
